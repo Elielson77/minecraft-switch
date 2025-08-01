@@ -1,0 +1,21 @@
+{
+  "name": "minecraft-server",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./server.js",
+    "start": "node ./server.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "dotenv": "^17.2.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "minecraft-server-util": "^5.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Duquelândia</h1>
+        <%= { running: 'Ligado', stopped: 'Desligado'}[state] %>
+        <% if (state==='stopped' ) { %>
+        <form action="/start" method="post">
+            <button type="submit">Ligar Servidor</button>
+        </form>
+        <% } else if (state==='running' ) { %>
+        <form action="/stop" method="post">
+            <button type="submit">Desligar Servidor</button>
+        </form>
+        <% } else { %>
+        <p>Aguardando mudança de estado...</p>
+        <% } %>
+    </body>
+</html>
