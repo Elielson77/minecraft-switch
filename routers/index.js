@@ -2,13 +2,13 @@ import { Router } from "express";
 import AWS from "aws-sdk";
 
 AWS.config.update({
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-  region: process.env.AWS_REGION,
+  accessKeyId: process.env.KEY,
+  secretAccessKey: process.env.SECRET_KEY,
+  region: process.env.REGION,
 });
 
 const ec2 = new AWS.EC2();
-const instanceId = process.env.EC2_INSTANCE_ID;
+const instanceId = process.env.INSTANCE_ID;
 
 const router = Router();
 
